@@ -28,6 +28,61 @@
   color: #61dafb;
 }
 
+/* Base App Styles */
+.app-container {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 20px;
+  background: #282c34;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  padding: 20px;
+  flex: 1;
+}
+
+.converter-container {
+  border: 2px dashed red;
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.app-footer {
+  padding: 10px;
+  background: #282c34;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-main {
+    padding: 10px;
+  }
+  
+  .converter-container {
+    padding: 15px;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +90,309 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Navigation Component Styles */
+.App-nav {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 20px;
+    background-color: #282c34; 
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem; 
+    font-family: 'Arial', sans-serif; 
+    margin-left: 20px; 
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #61dafb; 
+}
+
+/* PDF Upload Component Styles */
+.pdf-csv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.pdf-csv-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pdf-csv-error {
+  padding: 10px;
+  background: #ffebee;
+  color: #f44336;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pdf-csv-hidden-upload {
+  display: none;
+}
+
+.pdf-csv-upload-container {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.pdf-csv-upload-button {
+  padding: 12px 20px;
+  background: #2196F3;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.pdf-csv-upload-button:hover {
+  background: #0b7dda;
+}
+
+.pdf-csv-button-container {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.pdf-csv-action-button {
+  padding: 12px 25px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  position: relative;
+  background: #4CAF50;
+  transition: background-color 0.3s;
+}
+
+.pdf-csv-action-button:hover {
+  background: #3e8e41;
+}
+
+.pdf-csv-action-button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pdf-csv-progress-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pdf-csv-progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.pdf-csv-progress-fill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.pdf-csv-progress-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.pdf-csv-result-container {
+  margin: 30px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.pdf-csv-preview {
+  white-space: pre-wrap;
+  margin: 15px 0;
+  padding: 15px;
+  background: white;
+  border: 1px solid #eee;
+  max-height: 200px;
+  overflow: auto;
+  font-family: monospace;
+}
+
+.pdf-csv-download-button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.pdf-csv-download-button:hover {
+  background: #3e8e41;
+}
+
+.pdf-csv-reset-button {
+  padding: 10px 20px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.pdf-csv-reset-button:hover {
+  background: #d32f2f;
+}
+
+.pdf-csv-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  pointer-events: none;
+}
+
+.pdf-csv-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Modal Styles */
+.pdf-csv-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pdf-csv-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-csv-modal h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.pdf-csv-modal-content {
+  margin: 20px 0;
+}
+
+.pdf-csv-setting {
+  margin-bottom: 15px;
+}
+
+.pdf-csv-setting label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.pdf-csv-setting input,
+.pdf-csv-setting select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pdf-csv-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.pdf-csv-modal-close {
+  padding: 8px 16px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pdf-csv-modal-apply {
+  padding: 8px 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pdf-csv-settings-button {
+  padding: 8px 12px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.pdf-csv-settings-button:hover {
+  background: #e68a00;
+}
+
+.pdf-csv-note {
+  text-align: center;
+  color: #666;
+  margin: 10px 0;
+}
+
+.pdf-csv-download-group {
+  margin-top: 15px;
 }

@@ -1,0 +1,8 @@
+node_modules/
+
+/tesseract-cache/
+
+/uploads/
+
+.DS_Store
+Thumbs.db
