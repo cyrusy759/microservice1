@@ -1,7 +1,8 @@
 import './App.css';
-import PdfToCsvConverter from './components/Pdftocsv';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import PdfToCsvConverter from './components/Pdftocsv';
+import TestPage from './TestPage';
 
 function App() {
   return (
@@ -12,11 +13,20 @@ function App() {
       <div className="app-content">
         <Navigation />
         <main className="app-main">
-          <div className="converter-container">
-            <PdfToCsvConverter />
-          </div>
+          <Routes>
+            <Route path="/" element={
+              <div className="converter-container">
+                <PdfToCsvConverter />
+              </div>
+            } />
+            <Route path="/test" element={
+              <div className="converter-container">
+                <TestPage />
+              </div>
+            } />
+          </Routes>
         </main>
-      </div> 
+      </div>
       <footer className="app-footer">
         <p>Copyright</p>
       </footer>

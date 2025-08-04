@@ -6,6 +6,7 @@ function Navigation() {
     return (
         <nav className="App-nav">
             <Link to="/" className="nav-link">Upload a different file</Link>
+            <Link to="/test/" className='nav-link'>Test</Link>
         </nav>
     );
 }
