@@ -38,4 +38,4 @@ Content-Disposition: attachment; filename="converted.csv"
 
 # UML diagram
 
-![alt text](../images/uml.drawio.png)
+![alt text](./images/uml.drawio.png)
